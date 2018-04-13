@@ -9,16 +9,21 @@ public class Etudiant extends Person {
 		
 	}
 	
+	
 	public Etudiant(String lastName, String firstName, int age) {
 		super(lastName, firstName);
 		this.age = age;
 	}
+	
 
 	
 	public Etudiant(String lastName, String firstName, int age, Module module, Module... modules) {
 		this(lastName, firstName, age);
-		this.modules.add(module);
+		if(!this.modules.contains((Module) module)) {
+			this.modules.add(module);
+		}
 	}
+	
 	
 	
 	

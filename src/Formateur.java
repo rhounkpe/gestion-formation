@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Formateur extends Person {
 	private String entreprise;
-	private List<Course> courses = new ArrayList<Course>();
+	private List<Cours> cours = new ArrayList<Cours>();
 	
 	public Formateur() {
 
@@ -13,6 +13,13 @@ public class Formateur extends Person {
 		super(lastName, firstName);
 		this.entreprise = entreprise;
 	}	
+	
+	public void addCours(Cours... cours) {
+		for(Cours c : cours) {
+			this.cours.add(c);
+			c.setFormateur(this);
+		}
+	}
 	
 	/**
 	 * @return the entreprise
@@ -29,17 +36,17 @@ public class Formateur extends Person {
 	}
 
 	/**
-	 * @return the courses
+	 * @return the cours
 	 */
-	public List<Course> getCourses() {
-		return courses;
+	public List<Cours> getCourses() {
+		return cours;
 	}
 
 	/**
-	 * @param courses the courses to set
+	 * @param cours the cours to set
 	 */
-	public void setCourses(List<Course> courses) {
-		this.courses = courses;
+	public void setCourses(List<Cours> cours) {
+		this.cours = cours;
 	}
 
 	public Formateur(String entreprise) {

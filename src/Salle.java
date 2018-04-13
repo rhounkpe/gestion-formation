@@ -2,40 +2,50 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Salle {
-	private int numSalle;
+	private String numSalle;
 	private int capacity;
-	private List<Course> cours = new ArrayList<Course>();
+	private List<Cours> cours = new ArrayList<Cours>();
 	
-	public Salle(int numSalle, int capacity) {
+	public Salle(String numSalle, int capacity) {
 		this.numSalle = numSalle;
 		this.capacity = capacity;
+	}
+	
+	
+	public void addCours(Cours... cours) {
+		for(Cours c : cours) {
+			if(!this.cours.contains(c)) {
+				this.cours.add(c);
+			}			
+		}
+
 	}
 
 	/**
 	 * @return the numSalle
 	 */
-	public int getNumSalle() {
+	public String getNumSalle() {
 		return numSalle;
 	}
 
 	/**
 	 * @return the cours
 	 */
-	public List<Course> getCours() {
+	public List<Cours> getCours() {
 		return cours;
 	}
 
 	/**
 	 * @param cours the cours to set
 	 */
-	public void setCours(List<Course> cours) {
+	public void setCours(List<Cours> cours) {
 		this.cours = cours;
 	}
 
 	/**
 	 * @param numSalle the numSalle to set
 	 */
-	public void setNumSalle(int numSalle) {
+	public void setNumSalle(String numSalle) {
 		this.numSalle = numSalle;
 	}
 

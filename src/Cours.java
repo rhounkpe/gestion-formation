@@ -1,28 +1,44 @@
-import java.util.ArrayList;
 import java.util.List;
 
-public class Course {
+public class Cours {
 	private String intitule;
 	private int duree;
 	private Salle salle;
 	private Formateur formateur;
-	private List<Module> modules = new ArrayList<Module>();
+	private Module module;
 	
-	public Course() {
+	public Cours() {
 		
 	}
 	
-	public Course(String intitule, int duree) {
+
+	public Cours(String intitule, int duree) {
 		this.intitule = intitule;
 		this.duree = duree;		
 	}	
 	
-	public Course(String intitule, int duree, Salle salle, Formateur formateur) {
+	public Cours(String intitule, int duree, Salle salle, Formateur formateur) {
 		this(intitule, duree);
 		this.salle = salle;
 		this.formateur = formateur;
 	}
 
+	
+	
+	/**
+	 * @return the module
+	 */
+	public Module getModule() {
+		return module;
+	}
+
+	/**
+	 * @param module the module to set
+	 */
+	public void setModule(Module module) {
+		this.module = module;
+	}
+	
 	/**
 	 * @return the salle
 	 */
@@ -44,19 +60,6 @@ public class Course {
 		this.formateur = formateur;
 	}
 
-	/**
-	 * @return the modules
-	 */
-	public List<Module> getModules() {
-		return modules;
-	}
-
-	/**
-	 * @param modules the modules to set
-	 */
-	public void setModules(List<Module> modules) {
-		this.modules = modules;
-	}
 
 	/**
 	 * @param salle the salle to set

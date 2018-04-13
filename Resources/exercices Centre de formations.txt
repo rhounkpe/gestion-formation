@@ -1,0 +1,24 @@
+Ce que vous devez absolument gérer (sinon badabhoum) :
+
+	- Les relations sont bi-directionelles, il faut donc assurer la pertinence des données !
+		si l'élève 'E' suit le cours 'C' (donc que 'C' se trouve dans la liste des cours de 'E')
+		ALORS !!! 'E' doit absolument se trouver dans la liste des étudiants du cours 'C' !
+		A tout moment !!!!! (encore quelques !!!!!!!), la relation doit être bi-directionelle !!!!!!
+
+	- la durée d'un module dépend de la durée de tous ses cours
+	- (bonus pour le fun) ne pas permettre deux cours ayant le même intitulé d'être dans le même module
+	- (bonus pour le mega fun) faire en sorte que les étudiants qui ont une cote dans un cours, 
+		soient bien inscrits dans le cours où ils ont une cote.
+
+Ce que vous devez pouvoir récupérer comme informations : 
+(vous pouvez créer si vous le désirez une classe CenterManagement qui ne sera composée que de méthodes, 
+à vous de déterminer les paramètres d'entrée).
+
+	- savoir si l'étudiant dont on donne seulement le nom et prénom (ex: "Hirohisa Koyama") suit 
+		le module dont on donne seulement l'intitulé (ex : "sushi maker") (mmhh...)
+	- la moyenne des points d'un étudiant (aïe)
+	- le nom du formateur qui donne le plus de cours (chaud)
+	- les numéros des salles non occupées (tellement dur)
+	- l'entreprise qui donne cours le plus de jours (hardcore !)
+	- savoir pour un formateur le nom de l'étudiant à qui il donne le + cours et en cas d'égalité,
+		il faut tous les afficher (OMG ! insanely hard !!!)
